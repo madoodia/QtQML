@@ -1,3 +1,7 @@
+/* --------------------- */
+/* (C) 2020 madoodia.com */
+/* --------------------- */
+
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
