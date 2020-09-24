@@ -78,6 +78,12 @@
       "label": "python3",
       "command": "python ${fileDirname}/${fileBasename}",
       "problemMatcher": []
+    },
+    { // Run py file with python3
+      "type": "shell",
+      "label": "gammaray",
+      "command": "gammaray",
+      "problemMatcher": []
     }
   ]
 }
