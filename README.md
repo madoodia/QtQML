@@ -2,7 +2,7 @@
 Learning more advanced topics in Qt, QML and C++ (Personal Setup)
 
 ## Setup
-This repo is setuped very well for running on **QtCreator** and ** MS VSCode**
+This repo is setuped very well for running on **QtCreator** and **MS VSCode**
 
 - Using **clang-format**
 - Using **CMake** for build system
