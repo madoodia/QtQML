@@ -14,22 +14,24 @@ LINUX_DIR=$(dirname "$0")
 . $LINUX_DIR/envVars.sh
 # --------------------------- #
 
-# ------- Using G++6.5 ------ #
-# export CC=/usr/local/bin/gcc
-# export CXX=/usr/local/bin/g++
+# ------- Using G++9 ------ #
+export CC=/opt/rh/devtoolset-9/root/usr/bin/gcc
+export CXX=/opt/rh/devtoolset-9/root/usr/bin/g++
 
 # --------- Common ---------- #
-cd $ROOT
+cd $ROOT/$FOLDER
+
 if [ -d build ]; then
     rm -rf build*
 fi
 if [ -f "$ROOT/$FOLDER/$FOLDER" ]; then
     rm -rf $ROOT/$FOLDER/$FOLDER
 fi
+
 mkdir build
 cd build
 
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=$EXTRA_PREFIX_PATH $ROOT/$FOLDER
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=$EXTRA_PREFIX_PATH ..
 cmake --build .
 
 # ----= Folder Project =----- #
