@@ -20,6 +20,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Quick Qml REQUIRED)
 
 set(SOURCES
   main.cpp
+  src/checklistmodel.cpp
 )
 
 set(RESOURCES

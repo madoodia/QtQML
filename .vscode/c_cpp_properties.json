@@ -22,15 +22,8 @@
         "/opt/rh/devtoolset-9/root/bin/**",
         "${SDKS_LOCATION}/googletest/include",
         "${DEV_LOCATION}/madAPI/include/**",
-        "${SDKS_LOCATION}/glew/include",
         "${SDKS_LOCATION}/Qt5/include",
-        "${SDKS_LOCATION}/Qt5/include/**",
-        "${SDKS_LOCATION}/stb",
-        "${SDKS_LOCATION}/googletest/include",
-        "${SDKS_LOCATION}/OpenCL/include",
-        "${SDKS_LOCATION}/glfw/include",
-        "${SDKS_LOCATION}/glm",
-        "${SDKS_LOCATION}/CUDA/include"
+        "${SDKS_LOCATION}/Qt5/include/**"
       ],
       "defines": [],
       "compilerPath": "/opt/rh/devtoolset-9/root/bin/gcc",

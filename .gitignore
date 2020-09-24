@@ -1,6 +1,8 @@
-*build*
+*build
+*build-*
 !.buildSystem
 # vscode
+!.vscode
 .vscode/ipch
 
 # All files inside vd_maya will be ignored
