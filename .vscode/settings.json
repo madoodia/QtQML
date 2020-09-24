@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.linux": "makefile",
+    "*.cl": "cpp",
     "*.nmake": "makefile",
     "*.gnu": "makefile",
     "*.win": "makefile",
@@ -16,7 +17,10 @@
     "string": "cpp",
     "functional": "cpp",
     "sstream": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "qvariant": "cpp",
+    "qabstractlistmodel": "cpp",
+    "qhash": "cpp"
   },
   "editor.formatOnSave": true,
   "files.autoSave": "onFocusChange",

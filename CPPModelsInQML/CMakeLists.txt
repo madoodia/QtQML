@@ -15,8 +15,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Gui Quick Qml REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Quick Qml REQUIRED)
+include_directories(src)
+
+# find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Gui Quick Qml REQUIRED)
+# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Gui Quick Qml REQUIRED)
+find_package(Qt5 COMPONENTS Core Widgets Gui Quick Qml REQUIRED)
 
 set(SOURCES
   main.cpp

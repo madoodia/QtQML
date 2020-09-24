@@ -23,13 +23,13 @@ cd $ROOT
 if [ -d build ]; then
     rm -rf build*
 fi
-if [ -f "$ROOT/$FOLDER/$TARGET_NAME" ]; then
-    rm -rf $ROOT/$FOLDER/$TARGET_NAME
+if [ -f "$ROOT/$FOLDER/$FOLDER" ]; then
+    rm -rf $ROOT/$FOLDER/$FOLDER
 fi
 mkdir build
 cd build
 
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$EXTRA_PREFIX_PATH $ROOT/$FOLDER
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=$EXTRA_PREFIX_PATH $ROOT/$FOLDER
 cmake --build .
 
 # ----= Folder Project =----- #

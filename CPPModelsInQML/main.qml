@@ -16,7 +16,6 @@ Window {
   title: qsTr("Hello World")
 
   UI.CheckList {
-    id: checkList
     anchors.centerIn: parent
   }
 }

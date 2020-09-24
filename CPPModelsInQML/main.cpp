@@ -5,11 +5,14 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include "checklistmodel.h"
+
 int main(int argc, char *argv[])
 {
   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-
   QGuiApplication app(argc, argv);
+
+  qmlRegisterType<CheckListModel>("CheckListModel", 1, 0, "CheckListModel");
 
   QQmlApplicationEngine engine;
   const QUrl url(QStringLiteral("qrc:/main.qml"));
