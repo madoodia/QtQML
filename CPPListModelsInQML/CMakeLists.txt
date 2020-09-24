@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.14)
 
-project(CPPModelsInQML LANGUAGES CXX)
+project(CPPListModelsInQML LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -30,11 +30,11 @@ set(RESOURCES
   qml.qrc
 )
 
-add_executable(CPPModelsInQML ${SOURCES} ${RESOURCES})
+add_executable(CPPListModelsInQML ${SOURCES} ${RESOURCES})
 
-target_compile_definitions(CPPModelsInQML
+target_compile_definitions(CPPListModelsInQML
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-target_link_libraries(CPPModelsInQML
+target_link_libraries(CPPListModelsInQML
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
           Qt${QT_VERSION_MAJOR}::Gui
           Qt${QT_VERSION_MAJOR}::Quick

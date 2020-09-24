@@ -15,7 +15,7 @@ Window {
   visible: true
   title: qsTr("Hello World")
 
-  UI.CheckList {
+  UI.MCheckList {
     anchors.centerIn: parent
   }
 }
