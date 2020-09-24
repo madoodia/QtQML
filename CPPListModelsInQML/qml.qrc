@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qml/MCheckList.qml</file>
+        <file>qml/MCheckBox.qml</file>
     </qresource>
 </RCC>

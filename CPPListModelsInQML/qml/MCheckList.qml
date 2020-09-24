@@ -34,7 +34,7 @@ ColumnLayout {
       delegate: RowLayout {
         width: listView.width
         
-        CheckBox {
+        MCheckBox {
           checked: model.done
           onClicked: model.done = checked
         }
