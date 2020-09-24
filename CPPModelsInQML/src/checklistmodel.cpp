@@ -1,7 +1,3 @@
-/* --------------------- */
-/* (C) 2020 madoodia.com */
-/* --------------------- */
-
 #include "checklistmodel.h"
 
 CheckListModel::CheckListModel(QObject *parent)
@@ -11,7 +7,9 @@ CheckListModel::CheckListModel(QObject *parent)
 
 int CheckListModel::rowCount(const QModelIndex &parent) const
 {
-  if (!parent.isValid())
+  // For list models only the root node (an invalid parent) should return the list's size. For all
+  // other (valid) parents, rowCount() should return 0 so that it does not become a tree model.
+  if (parent.isValid())
     return 0;
 
   return 100;
@@ -41,7 +39,6 @@ bool CheckListModel::setData(const QModelIndex &index, const QVariant &value, in
     emit dataChanged(index, index, QVector<int>() << role);
     return true;
   }
-
   return false;
 }
 
@@ -50,7 +47,7 @@ Qt::ItemFlags CheckListModel::flags(const QModelIndex &index) const
   if (!index.isValid())
     return Qt::NoItemFlags;
 
-  return Qt::ItemIsEditable;
+  return Qt::ItemIsEditable; // FIXME: Implement me!
 }
 
 QHash<int, QByteArray> CheckListModel::roleNames() const

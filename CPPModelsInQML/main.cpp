@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
   QGuiApplication app(argc, argv);
 
-  qmlRegisterType<CheckListModel>("CheckListModel", 1, 0, "CheckListModel");
+  qmlRegisterType<CheckListModel>("mad.CPPModelInQML", 1, 0, "CheckListModel");
 
   QQmlApplicationEngine engine;
   const QUrl url(QStringLiteral("qrc:/main.qml"));
