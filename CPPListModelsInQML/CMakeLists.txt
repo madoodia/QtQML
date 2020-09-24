@@ -23,6 +23,7 @@ find_package(Qt5 COMPONENTS Core Widgets Gui Quick Qml REQUIRED)
 
 set(SOURCES
   main.cpp
+  src/checklist.cpp
   src/checklistmodel.cpp
 )
 

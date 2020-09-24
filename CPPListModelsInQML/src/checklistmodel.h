@@ -3,9 +3,12 @@
 
 #include <QAbstractListModel>
 
+class CheckList;
+
 class CheckListModel : public QAbstractListModel
 {
   Q_OBJECT
+  Q_PROPERTY(CheckList *list READ list WRITE setList)
 
 public:
   explicit CheckListModel(QObject *parent = nullptr);
@@ -29,7 +32,11 @@ public:
 
   QHash<int, QByteArray> roleNames() const override;
 
+  CheckList *list() const;
+  void setList(CheckList *list);
+
 private:
+  CheckList *m_list;
 };
 
 #endif // CHECKLISTMODEL_H

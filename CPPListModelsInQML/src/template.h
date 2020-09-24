@@ -1,3 +1,7 @@
+/* --------------------- */
+/* (C) 2020 madoodia.com */
+/* --------------------- */
+
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 
@@ -9,6 +13,10 @@ class Template : public QObject
 
 public:
   explicit Template(QObject *parent = nullptr);
+
+signals:
+
+public slots:
 
 private:
 };

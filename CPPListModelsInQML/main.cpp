@@ -4,7 +4,9 @@
 
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 
+#include "checklist.h"
 #include "checklistmodel.h"
 
 int main(int argc, char *argv[])
@@ -12,10 +14,15 @@ int main(int argc, char *argv[])
   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
   QGuiApplication app(argc, argv);
 
-  qmlRegisterType<CheckListModel>("madoodia", 1, 0, "CheckListModel");
+  qmlRegisterType<CheckListModel>("madoodia", 1, 0, "MCheckListModel");
+  qmlRegisterUncreatableType<CheckList>("madoodia", 1, 0, "CheckList",
+                                        QStringLiteral("CheckList should not be used as a QML Type"));
+
+  CheckList checkList;
 
   QQmlApplicationEngine engine;
-  const QUrl url(QStringLiteral("qrc:/main.qml"));
+  engine.rootContext()->setContextProperty(QStringLiteral("checkList"), &checkList);
+  QUrl url(QStringLiteral("qrc:/main.qml"));
   QObject::connect(
       &engine, &QQmlApplicationEngine::objectCreated, &app,
       [url](QObject *obj, const QUrl &objUrl) {

@@ -20,7 +20,8 @@
     "iosfwd": "cpp",
     "qvariant": "cpp",
     "qabstractlistmodel": "cpp",
-    "qhash": "cpp"
+    "qhash": "cpp",
+    "qqmlapplicationengine": "cpp"
   },
   "editor.formatOnSave": true,
   "files.autoSave": "onFocusChange",
