@@ -37,6 +37,7 @@ void CheckList::appendItem()
 
   CheckItem item;
   item.done = false;
+  item.description = "newly created";
   m_items.append(item);
 
   emit postItemAppended();

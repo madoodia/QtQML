@@ -13,6 +13,7 @@ ColumnLayout {
     id: mod
     list: checkList
   }
+  
   Frame {
     Layout.fillWidth: true
 
