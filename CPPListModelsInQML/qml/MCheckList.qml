@@ -4,7 +4,15 @@ import QtQuick.Layouts 1.15
 
 import madoodia 1.0
 
+
+
+
 ColumnLayout {
+
+  MCheckListModel {
+    id: mod
+    list: checkList
+  }
   Frame {
     Layout.fillWidth: true
 
@@ -14,11 +22,8 @@ ColumnLayout {
       implicitHeight: 250
       clip: true
       spacing: 5
-      anchors.fill: parent
 
-      model: MCheckListModel {
-        list: checkList
-      }
+      model: mod
       
       // model: ListModel {
       //   ListElement {
@@ -44,6 +49,30 @@ ColumnLayout {
           text: model.description
           onEditingFinished: model.description = text
         }
+      }
+    }
+  }
+
+  ComboBox {
+    id: comboView
+    Layout.fillWidth: true
+    clip: true
+    width: parent.width
+
+    model: mod
+
+    delegate: RowLayout {
+      width: listView.width
+      
+      MCheckBox {
+        checked: model.done
+        onClicked: model.done = checked
+      }
+
+      TextField {
+        Layout.fillWidth: true
+        text: model.description
+        onEditingFinished: model.description = text
       }
     }
   }
